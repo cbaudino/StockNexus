@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Agregar Producto</h1>
+<form method="post">
+    <label for="name">Nombre</label>
+    <input type="text" id="name" name="name" required>
+    <label for="description">Descripción:</label>
+    <input type="text" id="description" name="description">
+    <label for="price">Precio:</label>
+    <input type="number" id="price" name="price" step="0.01" required>
+    <label for="supplier">Proveedor:</label>
+    <input type="text" id="supplier" name="supplier" required>
+    <label for="stock">Stock:</label>
+    <input type="number" id="stock" name="stock" required>
+    <button type="submit">Agregar producto</button>
+</form>
+{% endblock %}

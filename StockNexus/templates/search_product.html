@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Buscar Producto</h1>
+<form method="post">
+    <label for="query">Buscar:</label>
+    <input type="text" id="query" name="query" required>
+    <button type="submit">Buscar</button>
+</form>
+{% if products %}
+    <h2>Resultados de la búsqueda</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Proveedor</th>
+            <th>Stock</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.supplier }}</td>
+                <td>{{ product.stock }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+{% endblock %}
