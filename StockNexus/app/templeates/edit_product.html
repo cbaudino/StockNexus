@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}
+        </div>
+        <div>
+            {{ form.description.label }}<br>
+            {{ form.description(size=32) }}
+        </div>
+        <div>
+            {{ form.price.label }}<br>
+            {{ form.price(size=32) }}
+        </div>
+        <div>
+            {{ form.supplier.label }}<br>
+            {{ form.supplier(size=32) }}
+        </div>
+        <div>
+            {{ form.stock.label }}<br>
+            {{ form.stock(size=32) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</body>
+</html>
